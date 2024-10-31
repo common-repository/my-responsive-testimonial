@@ -1,0 +1,7 @@
+You can just paste anyone from below shortcodes: 
+
+[testimonial imground="50" img_border="4px solid #eee"][client_info][rwpt_quote][/testimonial]
+
+[testimonial header_bg="#D35400" rwpt_bg="#008080" client_info_bg="#E67E22" imgrotate="25" img_style="none" icon_color="#008080" iconhover_color="#FFFFFF" ][client_info][rwpt_quote][/testimonial]
+
+[testimonial header_bg="#16A085" rwpt_bg="#2c3e50" client_info_bg="#2980B9" icon_color="#E67E22" iconhover_color="#FFFFFF" imground="50" img_border="4px solid #eee"][client_info][rwpt_quote][/testimonial]

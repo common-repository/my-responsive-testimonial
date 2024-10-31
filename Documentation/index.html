@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Responsive Wordpress Testimonial Plugin vs1.0</title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lobster">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+ 
+		/*
+$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top-10}, 500);
+		});
+*/
+		
+		
+		// Cache selectors
+		var lastId,
+		    topMenu = $(".menu"),
+		    topMenuHeight = 80,
+		    // All list items
+		    menuItems = topMenu.find("a"),
+		    // Anchors corresponding to menu items
+		    scrollItems = menuItems.map(function(){
+		      var item = $($(this).attr("href"));
+		      if (item.length) { return item; }
+		    });
+		
+		// Bind click handler to menu items
+		// so we can get a fancy scroll animation
+		menuItems.click(function(e){
+		  var href = $(this).attr("href"),
+		      offsetTop = href === "#" ? 0 : $(href).offset().top-60+1;
+		  $('html, body').stop().animate({ 
+		      scrollTop: offsetTop
+		  }, 300);
+		  e.preventDefault();
+		});
+		
+		// Bind to scroll
+		$(window).scroll(function(){
+		   // Get container scroll position
+		   var fromTop = $(this).scrollTop()+topMenuHeight;
+		   
+		   // Get id of current scroll item
+		   var cur = scrollItems.map(function(){
+		     if ($(this).offset().top < fromTop)
+		       return this;
+		   });
+		   // Get the id of the current element
+		   cur = cur[cur.length-1];
+		   var id = cur && cur.length ? cur[0].id : "";
+		   
+		   if (lastId !== id) {
+		       lastId = id;
+		       // Set/remove active class
+		       menuItems
+		         .parent().removeClass("active")
+		         .end().filter("[href=#"+id+"]").parent().addClass("active");
+		   }                   
+		});
+		
+	});
+
+</script><style type="text/css"></style></head>
+
+<body>
+	<div class="topbar">
+		<div class="topbargreen"><div class="bordergreen"></div></div>
+	</div>
+	<a name="top"></a>
+	<div class="tableofcontents" style="overflow:auto;"><!-- start #mainmenu -->
+                <ul class="menu">
+                    <li class="active"><a href="#header-wrap" class="scroll">&nbsp;&nbsp;&nbsp;&nbsp;Start here</a></li>
+                    <li><a href="#install" class="scroll">1. Installing the Plugin</a></li>
+                    <li><a href="#demo" class="scroll">2. Import &amp; Setup Sample Data</a></li>
+                    <li><a href="#using-rwpt" class="scroll">3. Using the Plugin </a></li>
+                    <li><a href="#credits" class="scroll">5. Credits and Resources </a></li>
+				</ul>
+				               
+            </div>
+    
+    <div class="content-c">
+	<div id="header-wrap"><!-- start #header-wrap -->
+         <div class="container">
+			<div id="header"><!-- start #header -->
+			
+              	<div class="textheader">
+              		<h1><span class="color_logo">Responsive Wordpress Testimonial</span> Plugin <span class="version">vs1.1.1</span></h1>
+              		
+              		
+              		<h6 class="toph">Thank you for purchasing our plugin. We hope you enjoy our product! If you have any questions that are beyond the scope of this help file, please feel free to contact us <a href="http://envatobd.com/plugins/contact-us/">Support Page</a>.</h6>
+              	</div>
+                
+                <div class="copyrights">
+					<div class="left">
+						<p>Author: <a href="">Envatobd</a></p> 
+						<p>Email: <a href="mailto:hypercoderbd@gmail.com">@Envatobd</a></p>
+					</div>
+					<div class="right">
+						<p>Created: 30 Aug 2014</p>
+						<p>Plugin link: <a href="http://envatobd.com/plugins/plugins/responsive-wordpress-testimonial/">http://envatobd.com/plugins/plugins/responsive-wordpress-testimonial/</a></p>
+					</div>
+				</div> 
+                
+                <div class="clear"></div>
+            </div><!-- end #header -->
+            
+            
+            <div class="clear"></div>
+      
+	
+	<div class="videos-box">
+
+			<div class="box-left">
+                    <li><a href="#install" class="scroll">1. Installing the Plugin</a></li>
+                    <li><a href="#demo" class="scroll">2. Import &amp; Setup Sample Data</a></li>
+                    <li><a href="#using-rwpt" class="scroll">3. Using the Plugin </a></li>
+                    <li><a href="#credits" class="scroll">5. Credits and Resources </a></li>
+			</div>
+		</div>
+	
+	<div id="maincontent">
+
+			<div class="nota2">
+				<p><strong>Note 1:</strong> When uploading your client's images (Featured image in testimonial post), make sure that you always use square image like <em>150px*150px, 200px*200px. Minimum image size is : 150px*150px </em>  </p>
+				</div><br>
+				
+			<div class="section">
+			<h3>Getting started</h3>
+			<p>We assume you have your own WordPress & Theme installed, so let's get started! if not, and if you don't know how to do that, check this <a href="http://codex.wordpress.org/Installing_WordPress">link</a></p><br><br>	
+			<h3 id="install">1. Installation<a href="#header-wrap" class="toplink scroll">top</a></h3>
+			
+           	  <p>There are <strong>2 ways</strong> to install wordpress Plugins: upload <strong>unzipped</strong> theme via FTP or use the <strong>zipped</strong> file directly by on the wordpress theme installer .<br><br>
+			  
+           	  <h6>1.1 Upload via FTP</h6>
+            	<ul class="llist">
+            	  <li>Log into your site via FTP . (if you don't have any FTP program you can use <a href="http://filezilla-project.org">FileZilla</a> )</li>
+            	  <li> Browse to your folder located at <strong>yoursite.com/wp-content/plugins </strong></li>
+            	  <li>Upload the un-zipped theme folder</li>
+            	  <li>Login to   Wordpress, in Left Menu  go to <strong> Plugins </strong></li>
+            	  <li>Find &amp; Activate the Plugin </li>
+              </ul>
+			  <br/>
+			  <p><img src="img/ftp_screenshot.png"></p><br>
+              <br>
+              <h6>1.2 Upload via Wordpress</h6>
+              <ul class="llist">
+              	<li>Login to Wordpress</li>
+              	<li>go to <strong> Plugins </strong> </li>
+              	<li>you will see <strong>Add New </strong>tabs<strong>. Click on the tab</li> 
+				<li>Then</strong>click <strong>Upload </strong>right below the tab</li>
+              	<li>Click choose file, browse to theme folder and choose the file <strong>responsive-wordpress-testimonial-installable.zip</strong>,  click <strong>Install</strong> and wait for a seccond.</li>
+              	<li>Activate the plugin</li>
+              </ul>
+			<br />
+			 <p><img src="img/wp_screenshot.png"></p><br>
+		</div>
+		<br />
+		
+			<div class="section">
+			<h3 id="demo" class="scroll">2. Import &amp; Setup Sample Data<a href="#header-wrap" class="toplink scroll">top</a></h3>
+           	  <p>The plugin comes with Sample data (just like the plugin preview) that allow you to create some dummy content to your site to help you get started with the plugin.</p>
+ 
+			  <p>After installation and activation of the plugin, you will see a blank testimonial list view page in your admin panel like below. To see demo testimonials, you need to upload the demo content.</p>
+			<br/>
+				<p><img src="img/empty_list.png"></p><br/><br/>
+			<br>
+           	  <h6>2.1 How to Import the sample data?</h6>
+            	 <ul class="llist">
+            	  <li>You can find the <strong>mylocalhostwordpress.wordpress.2014-08-30.xml</strong> file in plugin package in the 'demo content' folder.</li>
+            	  <li>Login to   Wordpress, in Left Menu  go to<strong> Tools</strong> -&gt;<strong> Import</strong></li> 
+            	  <li>Choose <strong>Wordpress,</strong> if the plugin haven't not been installed , the popup window will show up and just click <strong>Install Now.</strong></li>
+            	  <li>Click<strong> Activate Plugin &amp; Run Importer</strong></li>
+            	  <li>Click choose and browse to the <strong>mylocalhostwordpress.wordpress.2014-08-30.xml</strong></li>
+            	  <li>Click upload file and import,</li>
+            	  <li>Wait a few seconds .</li>
+           	  </ul>
+            	<br />
+				<p><img src="img/import.png"></p>
+				
+				<br>
+
+				<h6>2.2 After Importing Data</h6>
+            	 <p>After importing data go to <strong>My Testimonials</strong> -&gt;<strong>All Testimonials</strong>. You will see the testimonails with demo client's image. Now you have to add your client's image (featured images).
+            	<br />
+					<p><img src="img/demo_list.png"></p>
+				<br>
+				
+				
+				
+				
+			</div>
+			<br>
+
+					
+        	<div class="section">
+			<h3 id="using-rwpt" class="scroll">3. Using the Plugin<a href="#header-wrap" class="toplink scroll">top</a></h3>
+			<br/>
+<br/><br/>
+			
+			<h6>3.1 Adding Single Testimonial</h6>
+            	 <ul class="llist">
+            	  <li>If you have imported the demo content <strong>hypercoderbdplugindirectory.wordpress.2014-08-23.xml</strong> file, you can delete them completely and create new testimonials. Or edit them to with your client image, testimonial, and their name & company name.</li>
+				 <li>Add your testimonial title (1), featured image (2), testimonial (3), and client's info (4) as shown in below screenshot</li>
+           	  </ul>
+            	<br />
+				<p><img src="img/single_testimonial.png"></p>
+				
+				<br>
+
+				
+			<h6>3.2 Inserting Testimonial</h6>
+            	 <ul class="llist">
+					<li>Now that you have added your testimonials and want to use it on your page. So, go to your desired page and edit it.</li>
+					<li>When you want to insert your testimonial just click on the icon  <img src="img/icon.png">  and a popup window with the setting will be open.</li>
+					<li> In the <strong>Testimonial Heading</strong> Section, put your <em>Testimonial Heading, Font Size, Heading Color, and Heading Background.</em></li>
+					<li> In the <strong>Testimonial Setting</strong> Section, put your <em>Testimonial Quote Color, Background Color, and your quote animation style.</em></li>
+					<li> In the <strong>Client Info Setting</strong> Section, put your <em>Client Name Color, Company Name Color, Background Color, Animation Style, Social Icon Color, and Social Icon hovering color.</em></li>
+					<li> In the <strong>Image Setting</strong> Section, put your <em> image rotate degree, Image Animation Type, set Yes or No for client's round image, and set Borders if you want.</em> Default Image border is 0px solid #eee where 0px is the border width, solid is border style, and #eee border color. You can learn more about border here: http://www.w3schools.com/css/css_border.asp</li>
+
+					<li>When you are done with your setting. Click on <strong>Insert Testimonial</strong> to get your shortcode in editor</li>
+           	  </ul>
+			  
+			  <p>For selecting any UI color, you may visit at : <a href="http://flatuicolors.com/" target="_blank">FlatUIColors</a>, for Animation Selection help visit <a href="http://daneden.github.io/animate.css/" target="_blank">Animate.css</a></p>
+            	<br />
+				<p><img src="img/setting.png"></p>
+				
+				<br>
+			
+			
+			
+		</div> 
+
+
+       	<div class="section">
+			<h3 id="credits" class="scroll">5. Credits and Resources<a href="#header-wrap" class="toplink scroll">top</a></h3>
+			<br/>
+<br/><br/>
+			<p>We used and maintained the following credits to the authors</p>
+			<br>
+			<ul>
+				<li>jQuery</li>
+				<li>localScroll</li>
+				<li>Wow.js</li>
+				<li>Animate.css</li>
+				<li>Font Awesome</li>
+				<li>jscolor</li>
+			</ul>
+
+		</div>
+		<br/><br/>
+		
+		<h4>Thanks again for using this plugin. Feel free to contact us at <strong>Email</strong>: <em>hypercoderbd@gmail.com, <strong>Skype<strong> : Azizultex, or <a href="http://envatobd.com/plugins/contact-us/">contact page.</a> </h4>
+		
+		<br/>
+		<br/>
+		<br />
+		   
+	</div>
+</div>
+</div>
+</body>
+</html>

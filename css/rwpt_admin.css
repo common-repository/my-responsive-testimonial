@@ -1,0 +1,13 @@
+div#client_info {
+background-color: #eee;
+margin-bottom: 7px;
+box-shadow: 2px 2px 2px #ddd;
+border-left: 3px solid #73AD64;
+}
+p.label, p.input {
+display: inline-block;
+}
+p.label {
+width: 130px;
+margin-left:20px;
+}

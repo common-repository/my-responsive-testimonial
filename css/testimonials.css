@@ -1,0 +1,171 @@
+﻿* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+p.clients_info {
+margin: 0;
+}
+
+.rwpt_clearfix:after, div:after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+div.rwpt_testimonials h3 {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    font-weight: 300;
+    line-height: 1.3;
+    text-decoration: none;
+    font-family: museo-sans, sans-serif;
+}
+div.rwpt_testimonials img {
+    height: auto;
+    width: auto;
+    max-width: 100%}
+div.rwpt_testimonials .rwpt_wrap {
+    margin: 0 auto;
+    max-width: 100%}
+.rwpt_testimonials ul, .rwpt_testimonials ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.rwpt_testimonials .rwpt_quotes {
+    background-image: url(../img/quote-mark.png);
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    background-size: 82px 64px;
+    float: left;
+    height: 300px;
+    padding: 30px;
+    width: 35%}
+ul.rwpt_clearfix {
+    margin: 0!important;
+}
+.rwpt_testimonials .rwpt_quotes ul li p {
+    font-style: italic;
+    font-weight: 300!important;
+    line-height: 1.4;
+    margin-bottom: 0;
+    font-size: 20px;
+}
+.rwpt_testimonials .rwpt_author p, .rwpt_testimonials .rwpt_author p span.social_icons a {
+    display: none;
+}
+.rwpt_testimonials .rwpt_author p.active, .rwpt_testimonials .rwpt_author p.active span.social_icons a {
+    display: block;
+}
+.rwpt_testimonials .rwpt_author p span.cl_name {
+margin-right:20px;
+}
+.rwpt_testimonials .rwpt_author p span.cl_name, .rwpt_testimonials .rwpt_author p span.social_icons {
+float:left;
+}
+.rwpt_testimonials .rwpt_author p span.social_icons a {
+float:left;
+display:inline-block;
+margin:5px;
+font-size:20px;
+}
+.rwpt_testimonials .rwpt_quotes ul li {
+    display: none;
+}
+.rwpt_testimonials .rwpt_quotes ul li.active {
+    display: block;
+}
+.rwpt_testimonials .rwpt_photos {
+    float: right;
+    width: 65%}
+.rwpt_testimonials .rwpt_photos ul li {
+    display: block;
+    float: left;
+    line-height: 0;
+    width: 20%;
+    height: auto;
+}
+
+.rwpt_testimonials .rwpt_photos ul li a {
+    display: block;
+}
+.rwpt_testimonials .rwpt_photos ul li img {
+    -webkit-transition: all .7s ease-in-out;
+    -moz-transition: all .7s ease-in-out;
+    -ms-transition: all .7s ease-in-out;
+    -o-transition: all .7s ease-in-out;
+    transition: all .7s ease-in-out;
+    opacity: .2;
+	z-index:99999;
+}
+.rwpt_testimonials .rwpt_photos ul li a:hover img, .rwpt_testimonials .rwpt_photos ul li.active a img {
+    opacity: 1;
+}
+
+
+.rwpt_testimonials .rwpt_photos .rwpt_author {
+    clear: both;
+    font-size: 28px;
+    font-weight: 300;
+    padding: 2rem 2rem 2rem 4rem;
+    position: relative;
+}
+.rwpt_testimonials .rwpt_photos .rwpt_author:before {
+    border-style: solid;
+    border-width: 10px 0 10px 10px;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 34px;
+}
+@media screen and (-webkit-min-device-pixel-ratio:2) {
+    .rwpt_testimonials .rwpt_quotes {
+    background-image: url(images/quote-mark@2x.png);
+}
+}@media only screen and (max-width:1139px) {
+    , .rwpt_testimonials h3 {
+    padding-left: 2%!important;
+    padding-right: 2%!important;
+}
+.rwpt_testimonials .rwpt_quotes {
+    clear: both;
+    float: none;
+    height: auto;
+    width: 100%}
+.rwpt_testimonials .rwpt_photos {
+    float: none;
+    width: 100%}
+.rwpt_testimonials .rwpt_photos .rwpt_author:before {
+    bottom: 0;
+    border-width: 0 10px 10px;
+    left: 70px;
+    top: auto;
+}
+.rwpt_testimonials .rwpt_photos ul li {
+    height: auto;
+    width: 10%}
+}@media only screen and (max-width:1023px) {
+    .rwpt_testimonials h3 {
+    font-size: 32px;
+}
+}@media only screen and (max-width:480px) {
+    .rwpt_testimonials h3 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    padding: 0 5%!important;
+}
+.rwpt_testimonials .rwpt_photos ul li {
+    padding-bottom: 4px;
+    height: auto;
+    width: 20%}
+.rwpt_testimonials .rwpt_photos .rwpt_author {
+    font-size: 20px;
+    padding: 15px 5%
+	}
+.rwpt_testimonials .rwpt_quotes ul li p {
+    font-size: 20px;
+}
+}
